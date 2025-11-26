@@ -1,3 +1,5 @@
+# Temperature Converter v1.1
+
 def celsius_to_fahrenheit(celsius):
     """Конвертує Цельсій у Фаренгейт"""
     return (celsius * 9/5) + 32
@@ -29,3 +31,14 @@ try:
         print(f"{temp}°C = {result:.2f}°F")
     elif choice == '2':
         result = fahrenheit_to_celsius(temp)
+        print(f"{temp}°F = {result:.2f}°C")
+    elif choice == '3':
+        result = celsius_to_kelvin(temp)
+        print(f"{temp}°C = {result:.2f}K")
+    elif choice == '4':
+        result = kelvin_to_celsius(temp)
+        print(f"{temp}K = {result:.2f}°C")
+    else:
+        print("Невірний вибір!")
+except ValueError:
+    print("Помилка: введіть коректне число!")
